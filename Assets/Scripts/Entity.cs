@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class EntityData
 {
     public int maxHp;
@@ -9,7 +10,7 @@ public class EntityData
 
 public class Entity : MonoBehaviour
 {
-    protected int currentHp;
+    [SerializeField] protected int currentHp;
 
     public void TakeDamage(int damageTaken)
     {
