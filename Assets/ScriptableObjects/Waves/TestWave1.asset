@@ -16,7 +16,7 @@ MonoBehaviour:
   - monsterGroups:
     - monsterPrefab: {fileID: 7549374701875785194, guid: fd4d5b6f5ded8054ab3cf2604f87628c,
         type: 3}
-      count: 10
-    spawnersIndex: 00000000
+      count: 30
+    spawnersIndex: 0000000001000000020000000300000004000000050000000600000007000000
     delayBeforeNext: 0
     spawnNextWhenPreviousCleared: 0
