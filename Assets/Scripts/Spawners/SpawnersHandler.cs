@@ -32,7 +32,7 @@ public class SpawnersHandler : MonoBehaviour
                         transform.GetChild(currentWave.subwaves[i].spawnersIndex[k]).GetComponent<Spawner>().Spawn(currentWave.subwaves[i].monsterGroups[j].monsterPrefab);
                         currentGroupSpawned++;
 
-                        yield return new WaitForSeconds(1.0f);
+                        yield return new WaitForSeconds(currentWave.subwaves[i].delayBeforeNextMob);
                         if (currentGroupSpawned == currentWave.subwaves[i].monsterGroups[j].count)
                             break;
                     }

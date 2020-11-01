@@ -14,8 +14,9 @@ public class Subwave
 {
     public MonsterGroup[] monsterGroups;
     public int[] spawnersIndex;
-    public float delayBeforeNext = -1;
+    public float delayBeforeNextWave = -1;
     public bool spawnNextWhenPreviousCleared = false;
+    public float delayBeforeNextMob = 1.0f;
 }
 
 [System.Serializable]
