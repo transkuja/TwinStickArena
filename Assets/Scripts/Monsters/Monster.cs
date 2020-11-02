@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 [System.Serializable]
@@ -10,6 +11,7 @@ public class MonsterData : EntityData
 public class Monster : Entity
 {
     [SerializeField] MonsterData data;
+    [SerializeField] GameObject damageFeedback;
 
     private void Start()
     {
@@ -21,6 +23,14 @@ public class Monster : Entity
     {
         currentHp = _monsterData.maxHp;
         data = _monsterData;
+    }
+
+    public override void TakeDamage(int damageTaken)
+    {
+        base.TakeDamage(damageTaken);
+
+        damageFeedback.GetComponent<TextMeshPro>().text = damageTaken.ToString();
+        damageFeedback.GetComponent<Animator>().SetTrigger("pop");
     }
 
 }

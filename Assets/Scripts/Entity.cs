@@ -12,7 +12,7 @@ public class Entity : MonoBehaviour
 {
     [SerializeField] protected int currentHp;
 
-    public void TakeDamage(int damageTaken)
+    public virtual void TakeDamage(int damageTaken)
     {
         currentHp -= damageTaken;
         if (currentHp <= 0)
