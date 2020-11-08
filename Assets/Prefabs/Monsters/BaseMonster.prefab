@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 7549374701875785192}
   - component: {fileID: 7549374701875785193}
   - component: {fileID: 729152707953075961}
-  - component: {fileID: 2755309773771263487}
+  - component: {fileID: 7290796316680324208}
   - component: {fileID: 7904885150481494907}
   m_Layer: 0
   m_Name: BaseMonster
@@ -311,7 +311,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &2755309773771263487
+--- !u!114 &7290796316680324208
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -320,9 +320,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 7549374701875785194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 555bfb9a5476fea4d976be2c6a6df8c9, type: 3}
+  m_Script: {fileID: 11500000, guid: c3279dd110cee754580ce844c8b48d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  states:
+  - stateType: 1
+    conditionToEnter: 0
+    conditionParameter: 10
+  - stateType: 3
+    conditionToEnter: 0
+    conditionParameter: 20
+  - stateType: 0
+    conditionToEnter: 0
+    conditionParameter: 0
 --- !u!65 &7904885150481494907
 BoxCollider:
   m_ObjectHideFlags: 0
