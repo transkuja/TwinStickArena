@@ -1,16 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class AttackingAIState : MonsterAIState
+public class ChasingAIState : MonsterAIState
 {
+    NavMeshAgent agent;
+
     public override void OnEnterState()
     {
-
+        Debug.Log("allo ?");
+        if (agent == null)
+            agent = DrivenEntity.GetComponent<NavMeshAgent>();
     }
 
     public override void OnUpdateState()
     {
+        if (agent != null)
+            agent.SetDestination(PlayerRef.transform.position);
 
     }
 

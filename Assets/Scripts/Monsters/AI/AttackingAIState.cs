@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChasingAIState : MonsterAIState
+public class AttackingAIState : MonsterAIState
 {
+
     public override void OnEnterState()
     {
 
