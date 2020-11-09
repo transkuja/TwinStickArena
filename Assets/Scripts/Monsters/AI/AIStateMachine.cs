@@ -20,7 +20,7 @@ public class AIStateMachine : MonoBehaviour
         public float conditionParameter;
         private MonsterAIState state;
 
-        State()
+        public void InitState()
         {
             switch (stateType)
             {
@@ -67,6 +67,7 @@ public class AIStateMachine : MonoBehaviour
         TrashPlayer playerRef = FindObjectOfType<TrashPlayer>();
         foreach (var state in states)
         {
+            state.InitState();
             state.GetState.DrivenEntity = transform.gameObject;
             state.GetState.PlayerRef = playerRef.gameObject;
         }
@@ -77,6 +78,8 @@ public class AIStateMachine : MonoBehaviour
             currentState = defaultSt;
         else
             currentState = states[states.Length - 1];
+
+        currentState.GetState.OnEnterState();
     }
 
     void Update()

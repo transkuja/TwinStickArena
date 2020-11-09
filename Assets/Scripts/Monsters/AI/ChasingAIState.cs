@@ -9,7 +9,6 @@ public class ChasingAIState : MonsterAIState
 
     public override void OnEnterState()
     {
-        Debug.Log("allo ?");
         if (agent == null)
             agent = DrivenEntity.GetComponent<NavMeshAgent>();
     }

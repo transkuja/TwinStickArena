@@ -18,13 +18,9 @@ public class TrashPlayer : MonoBehaviour
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            Debug.Log("test");
             RaycastHit hit;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue()), out hit))
             {
-                Debug.Log("hit : " + hit.point);
-                Debug.Log(Mouse.current.position.ReadValue());
-                Debug.Log(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()));
                 if (hit.collider.GetComponent<TrashGround>())
                     agent.SetDestination(hit.point);
 
