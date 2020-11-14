@@ -10,7 +10,7 @@ public class SkillSOCreator
     {
         SkillSO asset = ScriptableObject.CreateInstance<SkillSO>();
 
-        AssetDatabase.CreateAsset(asset, "Assets/ScriptableObjects/Waves/NewSkillSO.asset");
+        AssetDatabase.CreateAsset(asset, "Assets/ScriptableObjects/Skills/NewSkillSO.asset");
         AssetDatabase.SaveAssets();
 
         EditorUtility.FocusProjectWindow();
